@@ -42,6 +42,7 @@ const ReturnItem = (id,name,login,action,type) =>{
                 <Card title={name} content1={id} content2={login}/>
             )
         }
+        default: return JSON.stringify({id,name,login,action})
     }
 
 };

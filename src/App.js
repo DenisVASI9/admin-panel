@@ -13,15 +13,17 @@ import UsersPage from "./pages/users";
 import ModeratorsPage from "./pages/moderators";
 import DemoPage from "./pages/demo";
 import Settings from "./pages/Admin/Settings/Settings";
+import CoursesPage from "./pages/Moderator/courses/Courses";
 // Pages
 
 // Глобальные стили
 import 'normalize.css';
 import 'antd/dist/antd.css';
 import './fonts/zillaslab.css'
+
 // Глобальные стили
 
-const store = configureStore()
+const store = configureStore();
 
 function App() {
     return <Provider store={store}>
@@ -32,6 +34,7 @@ function App() {
                 <Route exact path="/moderators/list" component={ModeratorsPage}/>
                 <Route exact path="/settings" component={Settings}/>
                 <Route exact path="/demo" component={DemoPage}/>
+                <Route exact path="/courses" component={CoursesPage}/>
             </Switch>
         </ConnectedRouter>
     </Provider>

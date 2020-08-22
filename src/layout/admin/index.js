@@ -35,9 +35,9 @@ const MainLayout = (props) => {
             leftPanelIsOpened,
             rightPanelIsOpened
         }
-    } = props
+    } = props;
 
-    const {width} = useWindowSize()
+    const {width} = useWindowSize();
 
     useLayoutEffect(() => {
         if (width <= 1000) {
@@ -47,7 +47,7 @@ const MainLayout = (props) => {
             triggerRightMenu(true);
             triggerLeftMenu(true);
         }
-    }, [triggerLeftMenu, triggerRightMenu, width])
+    }, [triggerLeftMenu, triggerRightMenu, width]);
 
     return <>
         <LeftPanel isOpened={leftPanelIsOpened}>
@@ -97,23 +97,23 @@ const MainLayout = (props) => {
         </PageWrapper>
         <RightPanel isOpened={rightPanelIsOpened}/>
     </>
-}
+};
 
 MainLayout.defaultProps = {
     type: 1
-}
+};
 
 const mapStateToProps = (state) => {
     return {
         layout: state.layout
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
         triggerLeftMenu: bindActionCreators(triggerLeftMenu, dispatch),
         triggerRightMenu: bindActionCreators(triggerRightMenu, dispatch)
     }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainLayout)

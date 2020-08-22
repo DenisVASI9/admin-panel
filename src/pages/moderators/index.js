@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import MainLayout from "../../layout/admin";
 import {Page, PageWrapper, PageTitle} from "../../components/page";
-import {Row, Col, Button, Pagination, Modal, Form, Input, Checkbox} from "antd"
+import {Row, Card, Col, Button, Pagination, Modal, Form, Input, Checkbox} from "antd"
 import {
     Table,
     TableHeader,
@@ -14,6 +14,39 @@ import {
 } from "./moderatos.styles";
 import {useWindowSize} from "../../core/hooks/useWindowSize";
 
+const ReturnItem = (id, name, login, action, type) => {
+    switch (type) {
+        case 1: {
+            return (
+                <TableItem>
+                    <Row align="center">
+                        <Col xs={6}>
+                            <TableItemText>{id}</TableItemText>
+                        </Col>
+                        <Col xs={6}>
+                            <TableItemText>{name}</TableItemText>
+                        </Col>
+                        <Col xs={6}>
+                            <TableItemText>{login}</TableItemText>
+                        </Col>
+                        <Col xs={6}>
+                            <Button type="primary">{action}</Button>
+                        </Col>
+                    </Row>
+                </TableItem>
+            )
+        }
+        case 2: {
+            return (
+                <Card title={name} content1={id} content2={login}/>
+            )
+        }
+        default:
+            return JSON.stringify({id, name, login, action})
+    }
+
+};
+
 const DesktopModerators = (props) => {
     return <Table>
         <TableHeader>
@@ -23,74 +56,38 @@ const DesktopModerators = (props) => {
                 <Col xs={6}><TableHeaderItem>Телефон</TableHeaderItem></Col>
                 <Col xs={6}><TableHeaderItem>Действия</TableHeaderItem></Col>
             </Row>
+            {props.users.map(user => ReturnItem(user.id, user.name, user.login, user.action, 1))}
         </TableHeader>
-        <TableItem>
-            <Row align="center">
-                <Col xs={6}>
-                    <TableItemText>bvgv-2342-23fv-svvf</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <TableItemText>Аркаша Петухов</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <TableItemText>+7 (324) - 23 - 234</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <Button type="primary">Открыть</Button>
-                </Col>
-            </Row>
-        </TableItem>
-        <TableItem>
-            <Row align="center">
-                <Col xs={6}>
-                    <TableItemText>bvgv-2342-23fv-svvf</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <TableItemText>Аркаша Петухов</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <TableItemText>+7 (324) - 23 - 234</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <Button type="primary">Открыть</Button>
-                </Col>
-            </Row>
-        </TableItem>
-        <TableItem>
-            <Row align="center">
-                <Col xs={6}>
-                    <TableItemText>bvgv-2342-23fv-svvf</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <TableItemText>Аркаша Петухов</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <TableItemText>+7 (324) - 23 - 234</TableItemText>
-                </Col>
-                <Col xs={6}>
-                    <Button type="primary">Открыть</Button>
-                </Col>
-            </Row>
-        </TableItem>
+
     </Table>
-}
+};
 
 const MobileModerators = (props) => {
-    return <div>Мобильные модераторы</div>
-}
+    return(
+        props.users.map(user => ReturnItem(user.id, user.name, user.login, user.action, 2))
+    )
+};
 
 const ModeratorsPage = () => {
 
-    const {width} = useWindowSize()
-    const [isModalShowed, setModalState] = useState(false)
+    const [users, setUsers] = useState([
+        {id: '123123123', name: 'Виталий Русанов', login: '8999584183', action: 'Открыть'},
+        {id: '123123123', name: 'Виталий Русанов', login: '8999584183', action: 'Открыть'},
+        {id: '123123123', name: 'Виталий Русанов', login: '8999584183', action: 'Открыть'},
+        {id: '123123123', name: 'Виталий Русанов', login: '8999584183', action: 'Открыть'},
+        {id: '123123123', name: 'Виталий Русанов', login: '8999584183', action: 'Открыть'}
+    ]);
+
+    const {width} = useWindowSize();
+    const [isModalShowed, setModalState] = useState(false);
 
     const handleOk = () => {
         setModalState(false)
-    }
+    };
 
     const handleCancel = () => {
         setModalState(false)
-    }
+    };
 
     return <MainLayout>
         <PageWrapper>
@@ -101,12 +98,12 @@ const ModeratorsPage = () => {
                     </Col>
                     <Col xs={12}>
                         <ModeratorsActions>
-                            <Button type="primary" onClick={() => (setModalState(true))}>Приграсить</Button>
+                            <Button type="primary" onClick={() => (setModalState(true))}>Пригласить</Button>
                         </ModeratorsActions>
                     </Col>
                 </Row>
-                {width > 400 ? <DesktopModerators /> : <MobileModerators />}
-                <Pagination defaultCurrent={1} total={50} />
+                {width > 400 ? <DesktopModerators users={users}/> : <MobileModerators users={users}/>}
+                <Pagination defaultCurrent={1} total={50}/>
             </Page>
         </PageWrapper>
         <Modal
@@ -154,6 +151,6 @@ const ModeratorsPage = () => {
             </Table>
         </Modal>
     </MainLayout>
-}
+};
 
 export default ModeratorsPage
