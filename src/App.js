@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import {createBrowserHistory} from "history";
+import {Route, Router, Switch} from "react-router";
+
+// Pages
+import MainPage from "./pages/main";
+// Pages
+
+// Глобальные стили
+import 'normalize.css';
+import 'antd/dist/antd.css';
+// Глобальные стили
+
+const history = createBrowserHistory()
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return <Router history={history}>
+        <Switch>
+            <Route path="/" component={MainPage}/>
+        </Switch>
+    </Router>
 }
 
 export default App;
