@@ -8,12 +8,13 @@ import configureStore, {history} from './store'
 
 // Pages
 import MainPage from "./pages/main";
-import DemoPage from "./pages/demo";
+import Settings from "./pages/Admin/Settings/Settings";
 // Pages
 
 // Глобальные стили
 import 'normalize.css';
 import 'antd/dist/antd.css';
+
 // Глобальные стили
 
 const store = configureStore()
@@ -23,7 +24,7 @@ function App() {
         <Router history={history}>
             <Switch>
                 <Route exact path="/" component={MainPage}/>
-                <Route exact="/demo" component={DemoPage}/>
+                <Route exact="/settings" component={Settings}/>
             </Switch>
         </Router>
     </Provider>
