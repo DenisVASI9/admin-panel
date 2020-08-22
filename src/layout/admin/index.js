@@ -1,9 +1,10 @@
 // React
 import React, {useLayoutEffect} from "react"
+import {NavLink} from "react-router-dom";
 // React
 
 // Components
-import {LeftPanel, RightPanel, PageWrapper, Header} from "./admin.styles";
+import {LeftPanel, RightPanel, PageWrapper, Header, Links} from "./admin.styles";
 import {PanelButton, PanelButtonGroup} from "../../components/panel";
 import {Logo, LogoWrapper} from "../../components/logo";
 // Components
@@ -21,6 +22,8 @@ import {MenuOutlined, QuestionOutlined, LoginOutlined} from '@ant-design/icons'
 // Hooks
 import {useWindowSize} from "../../core/hooks/useWindowSize";
 // Hooks
+
+import './styles.sass'
 
 const MainLayout = (props) => {
 
@@ -51,6 +54,10 @@ const MainLayout = (props) => {
             <LogoWrapper>
                 <Logo>I wanna learn</Logo>
             </LogoWrapper>
+            <Links>
+                <NavLink to="/users/list" className="menu-item" activeClassName="menu-item-active">Пользователи</NavLink>
+                <NavLink to="/moderators/list" className="menu-item" activeClassName="menu-item-active">Модераторы</NavLink>
+            </Links>
         </LeftPanel>
         <Header
             leftPanelIsOpened={leftPanelIsOpened}

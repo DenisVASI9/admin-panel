@@ -90,3 +90,7 @@ export const Header = styled(FixedPanel)`
 }}
 `
 // Header
+
+export const Links = styled.div`
+  padding: 0 16px;
+`

@@ -18,7 +18,7 @@ import Settings from "./pages/Admin/Settings/Settings";
 // Глобальные стили
 import 'normalize.css';
 import 'antd/dist/antd.css';
-
+import './fonts/zillaslab.css'
 // Глобальные стили
 
 const store = configureStore()
@@ -28,8 +28,8 @@ function App() {
         <ConnectedRouter history={history}>
             <Switch>
                 <Route exact path="/" component={MainPage}/>
-                <Route exact path="/users" component={UsersPage}/>
-                <Route exact path="/moderators" component={ModeratorsPage}/>
+                <Route exact path="/users/list" component={UsersPage}/>
+                <Route exact path="/moderators/list" component={ModeratorsPage}/>
                 <Route exact path="/settings" component={Settings}/>
                 <Route exact path="/demo" component={DemoPage}/>
             </Switch>

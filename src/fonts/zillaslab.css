@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab Light'), local('ZillaSlab-Light'), url('Zillaslablight.woff2') format('woff2'), url('Zillaslablight.woff') format('woff'), url('Zillaslablight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab'), local('ZillaSlab-Regular'), url('Zillaslab.woff2') format('woff2'), url('Zillaslab.woff') format('woff'), url('Zillaslab.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab SemiBold'), local('ZillaSlab-SemiBold'), url('Zillaslabsemibold.woff2') format('woff2'), url('Zillaslabsemibold.woff') format('woff'), url('Zillaslabsemibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab Italic'), local('ZillaSlab-Italic'), url('Zillaslabitalic.woff2') format('woff2'), url('Zillaslabitalic.woff') format('woff'), url('Zillaslabitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab Medium Italic'), local('ZillaSlab-MediumItalic'), url('Zillaslabmediumitalic.woff2') format('woff2'), url('Zillaslabmediumitalic.woff') format('woff'), url('Zillaslabmediumitalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab Light Italic'), local('ZillaSlab-LightItalic'), url('Zillaslablightitalic.woff2') format('woff2'), url('Zillaslablightitalic.woff') format('woff'), url('Zillaslablightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab Medium'), local('ZillaSlab-Medium'), url('Zillaslabmedium.woff2') format('woff2'), url('Zillaslabmedium.woff') format('woff'), url('Zillaslabmedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab Bold Italic'), local('ZillaSlab-BoldItalic'), url('Zillaslabbolditalic.woff2') format('woff2'), url('Zillaslabbolditalic.woff') format('woff'), url('Zillaslabbolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab SemiBold Italic'), local('ZillaSlab-SemiBoldItalic'), url('Zillaslabsemibolditalic.woff2') format('woff2'), url('Zillaslabsemibolditalic.woff') format('woff'), url('Zillaslabsemibolditalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab Bold'), local('ZillaSlab-Bold'), url('Zillaslabbold.woff2') format('woff2'), url('Zillaslabbold.woff') format('woff'), url('Zillaslabbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
