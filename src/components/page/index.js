@@ -14,4 +14,6 @@ export const Page = styled.div`
 export const PageTitle = styled.div`
   font-weight: 600;
   font-size: 16px;
+  display: flex;
+  align-items: center;
 `

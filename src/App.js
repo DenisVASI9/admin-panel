@@ -10,6 +10,7 @@ import {ConnectedRouter} from 'connected-react-router'
 // Pages
 import MainPage from "./pages/main";
 import UsersPage from "./pages/users";
+import ModeratorsPage from "./pages/moderators";
 import DemoPage from "./pages/demo";
 import Settings from "./pages/Admin/Settings/Settings";
 // Pages
@@ -28,6 +29,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={MainPage}/>
                 <Route exact path="/users" component={UsersPage}/>
+                <Route exact path="/moderators" component={ModeratorsPage}/>
                 <Route exact path="/settings" component={Settings}/>
                 <Route exact path="/demo" component={DemoPage}/>
             </Switch>
