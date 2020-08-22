@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Router, Switch} from "react-router";
+import {Route, Switch} from "react-router";
 
 // libs
 import {Provider} from "react-redux";
@@ -11,11 +11,13 @@ import {ConnectedRouter} from 'connected-react-router'
 import MainPage from "./pages/main";
 import UsersPage from "./pages/users";
 import DemoPage from "./pages/demo";
+import Settings from "./pages/Admin/Settings/Settings";
 // Pages
 
 // Глобальные стили
 import 'normalize.css';
 import 'antd/dist/antd.css';
+
 // Глобальные стили
 
 const store = configureStore()
@@ -27,6 +29,7 @@ function App() {
                 <Route exact path="/" component={MainPage}/>
                 <Route exact path="/users" component={UsersPage}/>
                 <Route exact="/demo" component={DemoPage}/>
+                <Route exact="/settings" component={Settings}/>
             </Switch>
         </ConnectedRouter>
     </Provider>
