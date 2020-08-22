@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bcd3283-ae14-468b-bfc9-cdf0aedcd865" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/logo/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/page/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/panel/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/constants/store/layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/hooks/useWindowSize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layout/admin/admin.styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layout/admin/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/demo/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/users/users.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/users/users.styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598089401399</updated>
       <workItem from="1598089402439" duration="642000" />
-      <workItem from="1598090062599" duration="2594000" />
+      <workItem from="1598090062599" duration="4510000" />
     </task>
     <servers />
   </component>

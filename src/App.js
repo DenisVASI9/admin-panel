@@ -4,10 +4,12 @@ import {Route, Router, Switch} from "react-router";
 // libs
 import {Provider} from "react-redux";
 import configureStore, {history} from './store'
+import {ConnectedRouter} from 'connected-react-router'
 // Libs
 
 // Pages
 import MainPage from "./pages/main";
+import UsersPage from "./pages/users";
 import DemoPage from "./pages/demo";
 // Pages
 
@@ -20,12 +22,13 @@ const store = configureStore()
 
 function App() {
     return <Provider store={store}>
-        <Router history={history}>
+        <ConnectedRouter history={history}>
             <Switch>
                 <Route exact path="/" component={MainPage}/>
+                <Route exact path="/users" component={UsersPage}/>
                 <Route exact="/demo" component={DemoPage}/>
             </Switch>
-        </Router>
+        </ConnectedRouter>
     </Provider>
 }
 

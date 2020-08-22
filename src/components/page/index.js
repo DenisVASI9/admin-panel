@@ -10,3 +10,8 @@ export const Page = styled.div`
   background: #fff;
   padding: 16px;
 `
+
+export const PageTitle = styled.div`
+  font-weight: 600;
+  font-size: 16px;
+`
