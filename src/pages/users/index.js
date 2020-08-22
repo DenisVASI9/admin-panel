@@ -1,22 +1,80 @@
 import React from "react"
 import MainLayout from "../../layout/admin";
 import {Page, PageWrapper} from "../../components/page";
-import {Row, Col} from "antd"
+import {Row, Col, Button, Pagination} from "antd"
 import {PageTitle} from "../../components/page";
 import {
-    UserTableHeader
-} from './users.styles'
+    Table,
+    TableHeader,
+    TableHeaderItem,
+    TableItem,
+    TableItemText
+} from '../../components/table'
 
 const UsersPage = () => {
     return <MainLayout>
         <PageWrapper>
             <Page>
                 <PageTitle>Список пользователей</PageTitle>
-                <UserTableHeader>
-                    <Row>
-                        <Col xs={8}>Имя</Col>
-                    </Row>
-                </UserTableHeader>
+                <Table>
+                    <TableHeader>
+                        <Row>
+                            <Col xs={6}><TableHeaderItem>ID</TableHeaderItem></Col>
+                            <Col xs={6}><TableHeaderItem>Имя</TableHeaderItem></Col>
+                            <Col xs={6}><TableHeaderItem>Телефон</TableHeaderItem></Col>
+                            <Col xs={6}><TableHeaderItem>Действия</TableHeaderItem></Col>
+                        </Row>
+                    </TableHeader>
+                    <TableItem>
+                        <Row align="center">
+                            <Col xs={6}>
+                                <TableItemText>bvgv-2342-23fv-svvf</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <TableItemText>Аркаша Петухов</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <TableItemText>+7 (324) - 23 - 234</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <Button type="primary">Открыть</Button>
+                            </Col>
+                        </Row>
+                    </TableItem>
+                    <TableItem>
+                        <Row align="center">
+                            <Col xs={6}>
+                                <TableItemText>bvgv-2342-23fv-svvf</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <TableItemText>Аркаша Петухов</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <TableItemText>+7 (324) - 23 - 234</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <Button type="primary">Открыть</Button>
+                            </Col>
+                        </Row>
+                    </TableItem>
+                    <TableItem>
+                        <Row align="center">
+                            <Col xs={6}>
+                                <TableItemText>bvgv-2342-23fv-svvf</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <TableItemText>Аркаша Петухов</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <TableItemText>+7 (324) - 23 - 234</TableItemText>
+                            </Col>
+                            <Col xs={6}>
+                                <Button type="primary">Открыть</Button>
+                            </Col>
+                        </Row>
+                    </TableItem>
+                </Table>
+                <Pagination defaultCurrent={1} total={50} />
             </Page>
         </PageWrapper>
     </MainLayout>
