@@ -1,10 +1,14 @@
 import React from 'react';
-
-import {createBrowserHistory} from "history";
 import {Route, Router, Switch} from "react-router";
+
+// libs
+import {Provider} from "react-redux";
+import configureStore, {history} from './store'
+// Libs
 
 // Pages
 import MainPage from "./pages/main";
+import DemoPage from "./pages/demo";
 // Pages
 
 // Глобальные стили
@@ -12,14 +16,17 @@ import 'normalize.css';
 import 'antd/dist/antd.css';
 // Глобальные стили
 
-const history = createBrowserHistory()
+const store = configureStore()
 
 function App() {
-    return <Router history={history}>
-        <Switch>
-            <Route path="/" component={MainPage}/>
-        </Switch>
-    </Router>
+    return <Provider store={store}>
+        <Router history={history}>
+            <Switch>
+                <Route exact path="/" component={MainPage}/>
+                <Route exact="/demo" component={DemoPage}/>
+            </Switch>
+        </Router>
+    </Provider>
 }
 
 export default App;
