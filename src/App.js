@@ -28,8 +28,8 @@ function App() {
             <Switch>
                 <Route exact path="/" component={MainPage}/>
                 <Route exact path="/users" component={UsersPage}/>
-                <Route exact="/demo" component={DemoPage}/>
-                <Route exact="/settings" component={Settings}/>
+                <Route exact path="/settings" component={Settings}/>
+                <Route exact path="/demo" component={DemoPage}/>
             </Switch>
         </ConnectedRouter>
     </Provider>

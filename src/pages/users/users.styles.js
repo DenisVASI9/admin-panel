@@ -7,6 +7,11 @@ export const TableHeader = styled.div`
   border-radius: 3px;
 `
 
+const TableHeaderWrapper = styled.div`
+
+`
+
 export const UserTableHeader = styled(TableHeader)`
   margin-top: 16px;
 `
+

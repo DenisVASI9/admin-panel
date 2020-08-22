@@ -4,8 +4,6 @@
     <list default="true" id="9bcd3283-ae14-468b-bfc9-cdf0aedcd865" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/page/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/users/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/users/users.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/users/users.styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598089401399</updated>
       <workItem from="1598089402439" duration="642000" />
-      <workItem from="1598090062599" duration="4510000" />
+      <workItem from="1598090062599" duration="4992000" />
     </task>
     <servers />
   </component>
@@ -74,6 +72,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="203" y="6" width="1024" height="840" key="#Project_Structure/0.0.1440.860@0.0.1440.860" timestamp="1598089409756" />
+    <state x="0" y="67" width="1440" height="713" key="DiffContextDialog" timestamp="1598095376402">
+      <screen x="0" y="0" width="2720" height="860" />
+    </state>
+    <state x="0" y="67" width="1440" height="713" key="DiffContextDialog/0.0.2720.860@0.0.2720.860" timestamp="1598095376402" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom" timestamp="1598090645204">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
