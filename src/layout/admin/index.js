@@ -55,8 +55,18 @@ const MainLayout = (props) => {
                 <Logo>I wanna learn</Logo>
             </LogoWrapper>
             <Links>
-                <NavLink to="/users/list" className="menu-item" activeClassName="menu-item-active">Пользователи</NavLink>
-                <NavLink to="/moderators/list" className="menu-item" activeClassName="menu-item-active">Модераторы</NavLink>
+                {props.type === 1 && <>
+                    <NavLink to="/users/list" className="menu-item"
+                             activeClassName="menu-item-active">Пользователи</NavLink>
+                    <NavLink to="/moderators/list" className="menu-item"
+                             activeClassName="menu-item-active">Модераторы</NavLink>
+                </>}
+                {props.type === 2 && <>
+                    <NavLink to="/users/list" className="menu-item" activeClassName="menu-item-active">Пользователи
+                        1</NavLink>
+                    <NavLink to="/moderators/list" className="menu-item" activeClassName="menu-item-active">Модераторы
+                        1</NavLink>
+                </>}
             </Links>
         </LeftPanel>
         <Header
@@ -87,6 +97,10 @@ const MainLayout = (props) => {
         </PageWrapper>
         <RightPanel isOpened={rightPanelIsOpened}/>
     </>
+}
+
+MainLayout.defaultProps = {
+    type: 1
 }
 
 const mapStateToProps = (state) => {
